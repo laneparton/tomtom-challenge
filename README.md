@@ -1,3 +1,19 @@
+# TomTom Challenge
+## Getting data from BE
+```
+  const [message, setMessage] = React.useState('api not set');
+
+  React.useEffect(() => {
+    fetch("http://localhost:3000/api")
+      .then((res) => {
+        return res.json()
+      })
+      .then(myJson => {
+        setMessage(myJson.message)
+      })
+  }, [message]);
+```
+
 <p align="center">
   <a href="https://www.gatsbyjs.org">
     <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
