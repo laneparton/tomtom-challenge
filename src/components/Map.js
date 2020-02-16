@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet"
 class DonorMap extends React.Component {
   constructor(props) {
     super(props)
-    console.log(props)
   }
 
   componentDidMount() {
@@ -19,10 +18,22 @@ class DonorMap extends React.Component {
         container: "map",
         style: "tomtom://vector/1/basic-main",
         center: [location[1], location[0]],
-        zoom: 15,
+        zoom: 12,
       })
       var marker = new window.tt.Marker()
         .setLngLat([-122.393201, 37.790766])
+        .addTo(map)
+      var marker2 = new window.tt.Marker()
+        .setLngLat([-122.419141, 37.783104])
+        .addTo(map)
+      var marker3 = new window.tt.Marker()
+        .setLngLat([-122.394401, 37.795034])
+        .addTo(map)
+      var marker4 = new window.tt.Marker()
+        .setLngLat([-122.398612, 37.800058])
+        .addTo(map)
+      var marker5 = new window.tt.Marker()
+        .setLngLat([-122.396967, 37.787054])
         .addTo(map)
     }
   }
