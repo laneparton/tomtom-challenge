@@ -32,6 +32,7 @@ export default function SearchBar() {
   const { latitude, longitude } = usePosition(true, {
     enableHighAccuracy: true,
   })
+  console.log(latitude, longitude)
   return (
     <Paper
       component="form"

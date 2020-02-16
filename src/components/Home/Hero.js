@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <div className="home-hero">
       <div className="overlay">
-        <h3>Let's solve hunger and reduce waste.</h3>
+        <h1>Let's solve hunger and reduce waste.</h1>
       </div>
     </div>
   )

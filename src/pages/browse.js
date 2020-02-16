@@ -7,9 +7,9 @@ import DonorList from "../components/List"
 import "../styles/browse.scss"
 
 const BrowseDonors = ({ location, data }) => {
-  console.log(location.state)
-  const userLocation = [location.state.latitude, location.state.longitude]
-
+  const userLocation = [37.790638699999995, -122.390079]
+  //latitude: 37.790638699999995
+  //longitude: -122.390079
   return (
     <Layout>
       <SEO title="Local Donors" />
