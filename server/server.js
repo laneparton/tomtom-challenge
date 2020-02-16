@@ -73,7 +73,7 @@ app.get('/api', async (req, res) => {
   // const dbRes = await asyncFunction()
   return res.send(JSON.stringify({message: 'hello world from express'}))
 })
-app.post('/api/offers', jsonParser, async (req, res) => {
+app.post('/offers', jsonParser, async (req, res) => {
   const {
     qty, 
     description,
@@ -90,12 +90,12 @@ app.post('/api/offers', jsonParser, async (req, res) => {
   console.log(res2)
   return res.send(JSON.stringify({qty, description, price, donor_id, timestamp}))
 })
-app.get('/api/offers', async (req, res) => {
+app.get('/offers', async (req, res) => {
   const res2 = await getAllOffers()
   console.log(`all offers:`, res2)
   return res.send(JSON.stringify(res2))
 })
-app.get('/api/offers/:id', async (req, res) => {
+app.get('/offers/:id', async (req, res) => {
   const res2 = await getOffersFromDonor(req.params.id)
   console.log(`offers from ${req.params.id}:`, res2)
   // return res.send(JSON.stringify(res2))
