@@ -1,0 +1,26 @@
+[
+  {
+    "businessId": 1,
+    "name": "Burma Club",
+    "description": "Burmese, Thai",
+    "address": "8 Mint Plaza, San Francisco, CA 94103",
+    "offers": [
+      {
+        "food": "Test",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "businessId": 2,
+    "name": "Burma Love",
+    "description": "Burmese, Thai",
+    "address": "211 Valencia St, San Francisco, CA 94103",
+    "offers": [
+      {
+        "food": "Test2",
+        "quantity": 10
+      }
+    ]
+  }
+]
