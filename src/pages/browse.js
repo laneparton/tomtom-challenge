@@ -14,7 +14,7 @@ const BrowseDonors = () => {
   //longitude: -122.390079
   useEffect(() => {
     // get data from GitHub api
-    fetch(`http://yente.xyz/api/donors/`)
+    fetch(`https://yente.xyz/api/donors/`)
       .then(response => response.json()) // parse JSON from request
       .then(resultData => {
         console.log(resultData)

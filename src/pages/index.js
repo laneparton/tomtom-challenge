@@ -27,7 +27,7 @@ const IndexPage = () => {
 
   useEffect(() => {
     // get data from GitHub api
-    fetch(`http://yente.xyz/api/offers/`)
+    fetch(`https://yente.xyz/api/offers/`)
       .then(response => response.json()) // parse JSON from request
       .then(resultData => {
         console.log(resultData)
