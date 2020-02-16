@@ -1,0 +1,7 @@
+id,name,donor_id,price,timestamp,qty,img,description
+1,Old Pizza,3,123,,12,food1.jpg,We have some day old pizza that we need to get rid of
+2,Chicken Curry,2,300,,20,food2.jpg,There's too much chicken curry
+3,Cornbread,1,100,,6,food3.jpg,Delicious cornbread for cheap
+4,Old Pastries,1,232,,4,food4.jpg,Day old pastries for sale
+5,Chicken Tenders,1,200,,14,food5.jpg,Chicken tenders kept warm that we don't want to throw away
+6,Day Old Calzones,3,100,,11,food6.jpg,Plenty of day old calzones for cheap
