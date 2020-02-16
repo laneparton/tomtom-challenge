@@ -1,4 +1,5 @@
 import React from "react"
+<<<<<<< Updated upstream
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
@@ -17,5 +18,43 @@ const IndexPage = () => (
     <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )
+=======
+
+import Layout from "../components/Common/Layout"
+import SEO from "../components/Common/SEO"
+
+import { makeStyles } from "@material-ui/core/styles"
+import Grid from "@material-ui/core/Grid"
+import Hero from "../components/Home/Hero"
+import SearchBar from "../components/Home/SearchBar"
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    width: "100%",
+    backgroundColor: theme.palette.background.paper,
+  },
+  nested: {
+    paddingLeft: theme.spacing(4),
+  },
+}))
+
+const IndexPage = () => {
+  const classes = useStyles()
+
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <Grid container justify="center">
+        <Grid item xs={11}>
+          <Hero />
+        </Grid>
+        <Grid item xs={10}>
+          <SearchBar />
+        </Grid>
+      </Grid>
+    </Layout>
+  )
+}
+>>>>>>> Stashed changes
 
 export default IndexPage

@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+<<<<<<< Updated upstream
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-manifest": "^2.2.39",
@@ -17,6 +18,31 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1"
+=======
+    "@material-ui/core": "^4.0.1",
+    "@material-ui/icons": "^4.2.0",
+    "@material-ui/styles": "^4.0.1",
+    "@tomtom-international/web-sdk-maps": "^5.45.0",
+    "@tomtom-international/web-sdk-services": "^5.45.0",
+    "gatsby": "^2.7.5",
+    "gatsby-image": "^2.1.2",
+    "gatsby-plugin-manifest": "^2.1.1",
+    "gatsby-plugin-material-ui": "^2.0.1",
+    "gatsby-plugin-offline": "^2.1.1",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-sass": "^2.1.28",
+    "gatsby-plugin-sharp": "^2.1.2",
+    "gatsby-source-filesystem": "^2.0.37",
+    "gatsby-transformer-json": "^2.2.26",
+    "gatsby-transformer-sharp": "^2.1.20",
+    "node-sass": "^4.13.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
+    "typeface-roboto": "0.0.54",
+    "use-position": "0.0.6"
+>>>>>>> Stashed changes
   },
   "devDependencies": {
     "prettier": "^1.19.1"
