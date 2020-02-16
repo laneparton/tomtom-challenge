@@ -1,65 +1,42 @@
-# TomTom Challenge
-## Getting data from BE
-```
-  const [message, setMessage] = React.useState('api not set');
+# Leftovers
+https://yente.xyz
 
-  React.useEffect(() => {
-    fetch("http://localhost:3000/api")
-      .then((res) => {
-        return res.json()
-      })
-      .then(myJson => {
-        setMessage(myJson.message)
-      })
-  }, [message]);
-```
+## Pitch
+Leftovers connects thrifty consumers with grocery stores, restaurants, and other food providers who need to sell their excess food quickly. Powered by TomTom's developer API.
 
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Material UI Starter
-</h1>
+## Built with
+ReactJS, Gatsby, NodeJS, Express, NGINX, MariaDB, TomTom
 
-This starter includes [Material UI](https://material-ui.com/) boilerplate and configuration files along with the standard Gatsby configuration files. It provides a starting point for developing Gatsby apps with Material UI. 
+## Inspiration
+It's painful seeing perfectly good food being thrown away. We believe there is a good opportunity to connect thrifty consumers with food providers. Our service is similar to imperfectfoods, but instead of a delivery subscription our users can get their food immediately.
 
-View the demo app [here](https://material-ui-starter.netlify.com/).
+## What it does
+Leftovers is an online marketplace for food providers like grocery stores and restaurants to sell their excess food quickly. Leftover's online map view works on iphones, tablets, and computers to provide consumers with cheaper food options.
 
-## Features
+## How we built it
+Frontend
+Our Frontend is a server side rendered progressive web application written in ReactJS styled by MaterialUI. 
 
-- Material UI Framework
-- Roboto Typeface (self hosted)
-- SEO
-- Offline Support
-- Based on Gatsby Default Starter
+Backend
+Our backend is a NodeJS with Express server that serves the following endpoints which retrieve data from our MariaDB:
 
-## Quick start
+- GET `/api/offers`
+- POST `/api/offers`
+- GET `/api/offers/:id`
+- GET `/api/donors`
+- GET `/api/donors/:id`
 
-1.  **Create a Gatsby site.**
+Server
+Our remote server is hosted on a DigitalOcean droplet running an NGINX webserver with a reverse proxy.
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+## Challenges we ran into
+We had some challenges showing the TomTom mapview within our React app. To overcome this we created a separate component that loads the TomTom miniimzed script with vanilla JavaScript.
 
-    ```sh
-    # create a new Gatsby site using the Material UI starter
-    gatsby new <project-name> https://github.com/dominicabela/gatsby-starter-material-ui
-    ```
+## Accomplishments that we're proud of
+We successfully implemented many of our well-designed user stories in our live progressive web application. 
 
-2.  **Start developing.**
+## What we learned
+We learned a lot about TomTom's developer API and hooking the data into a server side rendered React frontend.
 
-    Navigate into your new site’s directory and start it up.
-
-    ```sh
-    cd <project-name>
-    gatsby develop
-    ```
-
-3.  **Open the source code and start editing!**
-
-    Your site is now running at `http://localhost:8000`!
-
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
-
-    Open the `<project-name>` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
-
+## What's next for Leftovers
+We still need to add some UI elements to Update and Delete data from our database. We would also like to implement a better UI for food providers to add offers to their place of business. We also plan on using TomTom's fuzzy search for our lookahead.

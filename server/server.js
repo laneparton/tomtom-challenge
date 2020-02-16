@@ -53,7 +53,7 @@ const resetTables = async () => {
 
     await conn.query(`DELETE FROM offers`)
     await insertOfferById(1,'Old Pizza',3,123,'NOW()',12,'food1.jpg','We have some day old pizza that we need to get rid of')
-    
+
   } catch (err) {
     return err
   }
@@ -83,6 +83,18 @@ const getDonorById = async (donorId) => {
     })
   })
 }
+const getAllDonors = async () => {
+  const conn = mariadb.createConnection({host: 'localhost', user:'tomtom', password: 'password', database: 'yente'});
+
+  return new Promise ((resolve, reject) => {
+    conn.query(`SELECT * FROM donors;`, (err, res) => {
+      console.log('donors: ', res); 
+      console.log('err: ', err); 
+      conn.end();
+      resolve(res)
+    })
+  })
+}
 
 const getAllOffers = async () => {
   const conn = mariadb.createConnection({host: 'localhost', user:'tomtom', password: 'password', database: 'yente'});
@@ -96,6 +108,10 @@ const getAllOffers = async () => {
     })
   })
 }
+
+/*****************************
+ * ALL ROUTES ***************
+*****************************/
 
 app.get('/api', async (req, res) => {
   return res.send(JSON.stringify({message: 'hello world from express'}))
@@ -125,6 +141,11 @@ app.get('/api/offers', async (req, res) => {
 app.get('/api/offers/:id', async (req, res) => {
   const res2 = await getOffersFromDonor(req.params.id)
   console.log(`offers from ${req.params.id}:`, res2)
+  return res.send(JSON.stringify(res2))
+})
+app.get('/api/donors', async (req, res) => {
+  const res2 = await getAllDonors()
+  console.log(`donors:`, res2)
   return res.send(JSON.stringify(res2))
 })
 app.get('/api/donors/:id', async (req, res) => {
