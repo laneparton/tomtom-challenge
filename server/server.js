@@ -52,8 +52,12 @@ const resetTables = async () => {
     await insertDonorById(3,'Jersey Pizza',37.788696,-122.393202,'Buzzy, brick-lined Italian spot serving clever East Coast-style pies, plus craft draft beer & wine.')
 
     await conn.query(`DELETE FROM offers`)
-    await insertOfferById(1,'Old Pizza',3,123,'NOW()',12,'food1.jpg','We have some day old pizza that we need to get rid of')
-
+    await insertOfferById(1,'Pepperoni Pizza',3,123,'NOW()',12,'food1.jpg','We have some day old pizza that we need to get rid of')
+    await insertOfferById(2,'Chicken Curry',2,300,'NOW()',20,'food2.jpg','Theres too much chicken curry')
+    await insertOfferById(3,'Cornbread',1,100,'NOW()',6,'food3.jpg','Delicious cornbread for cheap')
+    await insertOfferById(4,'Old Pastries',1,232,'NOW()',4,'food4.jpg','Day old pastries for sale')
+    await insertOfferById(5,'Chicken Tenders',1,200,'NOW()',14,'food5.jpg','Chicken tenders kept warm that we dont want to throw away')
+    await insertOfferById(6,'Day Old Calzones',3,100,'NOW()',11,'food6.jpg','Plenty of day old calzones for cheap')
   } catch (err) {
     return err
   }
