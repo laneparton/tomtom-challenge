@@ -38,7 +38,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "deployServer": "rsync -azP server.js reidjs@138.68.15.156:/home/reidjs/tomtom-server",
+    "deployServer": "rsync -azP server/* reidjs@138.68.15.156:/home/reidjs/tomtom-server",
     "deployFrontend": "gatsby build && rsync -azP public/* reidjs@138.68.15.156:/var/www/yente.xyz/html",
     "startServer": "nodemon server.js",
     "start": "npm run develop",
