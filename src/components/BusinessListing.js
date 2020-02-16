@@ -26,10 +26,7 @@ const BusinessListing = ({ donor }) => {
 
   useEffect(() => {
     // get data from GitHub api
-    fetch(
-      `https://cors-anywhere.herokuapp.com/http://yente.xyz/api/offers/` +
-        donor.id
-    )
+    fetch(`http://yente.xyz/api/offers/` + donor.id)
       .then(response => response.json()) // parse JSON from request
       .then(resultData => {
         console.log(resultData)
