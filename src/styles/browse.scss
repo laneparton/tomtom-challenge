@@ -1,3 +1,12 @@
 #map {
   height: 40vh;
 }
+
+.search-browse {
+  position: absolute;
+  top: 16px;
+  z-index: 10;
+  width: 95%;
+  left: 50%;
+  transform: translateX(-50%);
+}

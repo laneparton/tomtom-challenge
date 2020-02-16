@@ -26,17 +26,16 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-export default function SearchBar() {
+const SearchBar = ({ isBrowse }) => {
   const classes = useStyles()
   const [searchString, setSearchString] = useState(null)
   const { latitude, longitude } = usePosition(true, {
     enableHighAccuracy: true,
   })
-  console.log(latitude, longitude)
   return (
     <Paper
       component="form"
-      className={classes.root}
+      className={classes.root + (isBrowse && " search-browse")}
       onSubmit={event => {
         event.preventDefault()
         navigate("/browse/", {
@@ -60,3 +59,5 @@ export default function SearchBar() {
     </Paper>
   )
 }
+
+export default SearchBar
