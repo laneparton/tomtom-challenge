@@ -5,6 +5,7 @@ import BottomNavigationAction from "@material-ui/core/BottomNavigationAction"
 import SearchIcon from "@material-ui/icons/Search"
 import FavoriteIcon from "@material-ui/icons/Favorite"
 import LocationOnIcon from "@material-ui/icons/LocationOn"
+import DescriptionIcon from "@material-ui/icons/Description"
 
 const useStyles = makeStyles({
   stickToBottom: {
@@ -28,6 +29,7 @@ export default function Navigation() {
       className={classes.stickToBottom}
     >
       <BottomNavigationAction label="Search" icon={<SearchIcon />} />
+      <BottomNavigationAction label="My Orders" icon={<DescriptionIcon />} />
       <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
       <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
     </BottomNavigation>

@@ -1,17 +1,12 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 
-function addMarker() {
-  var marker = new window.tt.Marker()
-    .setLngLat([-122.393201, 37.790766])
-    .addTo(map)
-}
-
 class DonorMap extends React.Component {
   constructor(props) {
     super(props)
     console.log(props)
   }
+
   componentDidMount() {
     const { location, query } = this.props
     const script = document.createElement("script")
@@ -26,9 +21,9 @@ class DonorMap extends React.Component {
         center: [location[1], location[0]],
         zoom: 15,
       })
-      for (let i = 0; i < query.nodes.length; i++) {
-        // addMarker()
-      }
+      var marker = new window.tt.Marker()
+        .setLngLat([-122.393201, 37.790766])
+        .addTo(map)
     }
   }
 

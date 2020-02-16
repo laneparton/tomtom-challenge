@@ -1,24 +1,4 @@
 import React from "react"
-<<<<<<< Updated upstream
-import { Link } from "gatsby"
-
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
-
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
-=======
 
 import Layout from "../components/Common/Layout"
 import SEO from "../components/Common/SEO"
@@ -27,6 +7,8 @@ import { makeStyles } from "@material-ui/core/styles"
 import Grid from "@material-ui/core/Grid"
 import Hero from "../components/Home/Hero"
 import SearchBar from "../components/Home/SearchBar"
+
+import "../styles/home.scss"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -45,16 +27,27 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <Grid container justify="center">
-        <Grid item xs={11}>
+        <Grid item xs={12}>
           <Hero />
         </Grid>
         <Grid item xs={10}>
-          <SearchBar />
+          <div className="home-search">
+            <SearchBar />
+          </div>
+        </Grid>
+        <Grid item xs={12}>
+          <div className="home-available">
+            <h4>Meals Available Now</h4>
+          </div>
+        </Grid>
+        <Grid item xs={12}>
+          <div className="home-available">
+            <h4>Recently Viewed</h4>
+          </div>
         </Grid>
       </Grid>
     </Layout>
   )
 }
->>>>>>> Stashed changes
 
 export default IndexPage
